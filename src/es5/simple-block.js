@@ -31,12 +31,3 @@
 		save: save
 	} );
 }());
-
-wp.blocks.registerBlockType( 'meetup/simple-es5', {
-	title: 'Título del bloque',
-	icon: 'icono dashicon',
-	category: 'categoría (debe existir)',
-	attributes: {},
-	edit: Componente Edit,
-	save: Componente Save
-} );

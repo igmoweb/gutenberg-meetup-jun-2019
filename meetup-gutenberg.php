@@ -12,7 +12,7 @@ add_action( 'enqueue_block_editor_assets', function() {
 	// ES5 Blocks
 	wp_enqueue_script(
 		'es5-gutenberg-patreon',
-		plugin_dir_url( __FILE__ ) . '/src/js/es5/simple-block.js',
+		plugin_dir_url( __FILE__ ) . '/src/es5/simple-block.js',
 		$deps
 	);
 
