@@ -16,6 +16,13 @@ add_action( 'enqueue_block_editor_assets', function() {
 		$deps
 	);
 
+	// ES6 Scripts
+	wp_enqueue_script(
+		'es6-meetup',
+		plugin_dir_url( __FILE__ ) . '/build/index.js',
+		$deps
+	);
+
 	// Global editor styles
 	wp_enqueue_style(
 		'gutenberg-editor',

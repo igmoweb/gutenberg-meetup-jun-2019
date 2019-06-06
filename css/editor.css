@@ -1,3 +1,4 @@
-.wp-block[data-type="meetup/simple-es5"] {
+.wp-block[data-type="meetup/simple-es5"],
+.wp-block[data-type="meetup/simple-es6"] {
 	background: #ff8679;
 }
