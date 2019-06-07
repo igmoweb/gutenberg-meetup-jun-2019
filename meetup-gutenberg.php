@@ -55,3 +55,13 @@ add_filter( 'block_categories', function ( $categories, $post ) {
 		]
 	);
 }, 10, 2 );
+
+add_action( 'init', function () {
+	register_meta( 'post', 'subheadline', [
+		'object_subtype' => 'post',
+		'show_in_rest'   => true,
+		'type'           => 'string',
+		'single'         => true,
+	] );
+
+} );
