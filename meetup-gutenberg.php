@@ -64,4 +64,31 @@ add_action( 'init', function () {
 		'single'         => true,
 	] );
 
+	register_block_type( 'meetup/author-latest-posts', [
+			'render_callback' => 'meetup_latest_posts_render',
+		]
+	);
 } );
+
+function meetup_latest_posts_render( $attributes ) {
+	$per_page     = isset( $attributes['perPage'] ) ? absint( $attributes['perPage'] ) : 3;
+	$current_post = get_post( get_the_ID() );
+	$posts        = get_posts( [
+		'author'         => $current_post->post_author,
+		'posts_per_page' => $per_page,
+		'post_type'      => 'post'
+	] );
+
+	ob_start();
+	?>
+	<ul>
+		<?php foreach ( $posts as $post ): ?>
+			<li><a href="<?php echo esc_url( get_permalink( $post->ID ) ); ?>">
+					<?php echo get_the_title( $post->ID ); ?>
+				</a>
+			</li>
+		<?php endforeach; ?>
+	</ul>
+	<?php
+	return ob_get_clean();
+}
