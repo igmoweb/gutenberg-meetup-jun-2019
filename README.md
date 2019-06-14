@@ -23,3 +23,6 @@ El paquete `@wordpress/scripts` se encarga de la configuración de webpack.
 
 - `src/plugins/post-options-sidebar`: Muestra una sidebar en Gutenberg para cambiar un post meta llamado "subheadline". Hace uso de `withDispatch`.
 
+## Slides
+
+https://es.slideshare.net/IgnacioJosCruzmoreno/gutenberg-sin-miedo-149639457
